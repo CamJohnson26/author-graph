@@ -8,8 +8,8 @@ var cyStyle = [{
 }, {
   "selector": "node",
   "style": {
-    "width": "mapData(score, 0.00000948, 0.00002, 4, 600)",
-    "height": "mapData(score, 0.00000948, 0.00002, 4, 600)",
+    "width": "mapData(score, 0, 1, 4, 200)",
+    "height": "mapData(score, 0, 1, 4, 200)",
     "content": "data(name)",
     "font-size": "12px",
     "text-valign": "center",
