@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
       padding: 30,
       randomize: false,
       componentSpacing: 100,
-      nodeRepulsion: 200000,
+      nodeRepulsion: graphData.length * 600,
       edgeElasticity: 100,
       nestingFactor: 5,
       gravity: 160,
@@ -34,4 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   cy.center()
   cy.fit()
+  
+  const sourceHTML = graphSources.map(source => `<tr>${source}</tr><br>`).join("")
+  document.getElementById('sourceAnchor').innerHTML = `<table>${sourceHTML}</table>`
 })
