@@ -11,7 +11,7 @@ var cyStyle = [{
     "width": "mapData(score, 0, 1, 5, 400)",
     "height": "mapData(score, 0, 1, 5, 400)",
     "content": "data(name)",
-    "font-size": "12px",
+    "font-size": "24px",
     "text-valign": "center",
     "text-halign": "center",
     "background-color": "#555",
