@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<!-- This code is for demonstration purposes only.  You should not hotlink to Github, Rawgit, or files from the Cytoscape.js documentation in your production apps. -->
+<!-- From https://github.com/cytoscape/cytoscape.js/tree/master/documentation/demos/cose-layout -->
+<html>
+  <head>
+    <title>cose demo</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <link href="../style.css" rel="stylesheet" />
+
+    <!-- For loading external data files -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch"></script>
+    <script type="text/javascript" src="../cy-style.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+
+    <script src="../js/cytoscape.min.js"></script>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+    <script>
+      const showSources = () => {
+        const isHidden = document.getElementById("sourceAnchor").classList.contains("hidden")
+        if (isHidden) {
+          document.getElementById("sourceAnchor").classList.remove("hidden")
+        } else {
+          document.getElementById("sourceAnchor").classList.add("hidden")
+        }
+      }
+    </script>
+
+    <!-- for testing with local version of cytoscape.js -->
+    <!--<script src="../cytoscape.js/build/cytoscape.js"></script>-->
+  </head>
+  <body>
+    <h1>Author References</h1>
+    <div id="cy"></div>
+    <div id="sourceAnchor" class="hidden"></div>
+    <!-- Load application code at the end to ensure DOM is loaded -->
+    <script src="../code.js"></script>
+    <button style="z-index: 1000;position:absolute;top: 35px;left:5px;" onClick="showSources()")>Show Sources</button>
+  </body>
+</html>
